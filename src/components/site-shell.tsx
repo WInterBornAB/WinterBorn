@@ -100,6 +100,9 @@ export function SiteShell() {
           justify-content: flex-end;
           gap: 14px;
         }
+        .wordmark {
+          letter-spacing: 0.01em;
+        }
         .mobile-menu-toggle {
           width: 34px;
           height: 34px;
@@ -143,6 +146,7 @@ export function SiteShell() {
         }
         .mobile-nav a:last-child { border-bottom: 0; }
         @media (min-width: 700px) {
+          .wordmark { letter-spacing: -0.018em; }
           .mobile-menu-toggle, .mobile-nav { display: none; }
         }
       `}</style>
