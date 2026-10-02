@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { siteContent, type Language } from "@/content/site-content";
 import { Hero } from "@/components/hero";
 import { ProductGrid } from "@/components/product-grid";
 import { CompanySections } from "@/components/company-sections";
+import { shouldResetScroll } from "@/lib/scroll-restoration";
 
 export function SiteShell() {
   const [language, setLanguage] = useState<Language>("sv");
@@ -14,6 +15,29 @@ export function SiteShell() {
   const closeMenuLabel = language === "sv" ? "Stäng meny" : "Close menu";
 
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    if (!("scrollRestoration" in window.history)) return;
+
+    window.history.scrollRestoration = "manual";
+
+    const resetScroll = () => {
+      if (!shouldResetScroll(window.location.hash)) return;
+
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        });
+      });
+    };
+
+    resetScroll();
+    window.addEventListener("pageshow", resetScroll);
+
+    return () => {
+      window.removeEventListener("pageshow", resetScroll);
+    };
+  }, []);
 
   return (
     <div className="site-shell">
