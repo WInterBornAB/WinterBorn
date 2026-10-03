@@ -103,6 +103,10 @@ h2 { margin: 0; font-size: clamp(2.35rem, 7vw, 5.1rem); line-height: 0.98; lette
   50% { transform: scale(1.018); opacity: 1; }
 }
 
+@media (max-width: 699px) {
+  .hero-title { letter-spacing: 0.015em; }
+}
+
 @media (min-width: 700px) {
   .container { width: min(calc(100% - 72px), var(--max)); }
   .header-inner { grid-template-columns: 1fr auto auto; }
