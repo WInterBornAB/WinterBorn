@@ -45,6 +45,8 @@ export const siteContent: Record<Language, SiteContent> = {
           eyebrow: "Training platform",
           description: "En träningsplattform för atleter och coacher med strukturerade program, progression och enkel uppföljning.",
           status: "Under utveckling",
+          href: "https://wntrtraining.app",
+          external: true,
         },
         {
           name: "LureWise",
@@ -99,6 +101,8 @@ export const siteContent: Record<Language, SiteContent> = {
           eyebrow: "Training platform",
           description: "A training platform for athletes and coaches with structured programming, progression and simple follow-up.",
           status: "In development",
+          href: "https://wntrtraining.app",
+          external: true,
         },
         {
           name: "LureWise",
