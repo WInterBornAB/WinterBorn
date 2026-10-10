@@ -133,3 +133,22 @@ h2 { margin: 0; font-size: clamp(2.35rem, 7vw, 5.1rem); line-height: 0.98; lette
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+/* Refined typography and spacing */
+h2 { font-size: clamp(2rem, 4.5vw, 3.8rem); line-height: 1.06; letter-spacing: -0.045em; }
+#products .section-heading h2 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+.company-grid h2 { font-size: clamp(1.9rem, 3.8vw, 2.8rem); }
+.product-body h3 { font-size: clamp(1.85rem, 4vw, 2.8rem); }
+@media (max-width: 699px) {
+  .hero { min-height: auto; padding-top: 150px; padding-bottom: 100px; }
+  .hero-title { font-size: clamp(3.4rem, 12vw, 5.2rem); line-height: 0.98; letter-spacing: -0.035em; }
+  .hero-copy { margin-top: 28px; }
+  .section { padding-block: 64px; }
+  .hero.section { padding-top: 150px; padding-bottom: 100px; }
+  .section-heading, .split-section { gap: 18px; }
+  .section-intro { margin-top: 18px; }
+  .product-grid { margin-top: 32px; }
+  .product-card { min-height: 330px; }
+  .product-body { padding-block: 30px; }
+  .contact-section { padding-block: 72px; }
+}
