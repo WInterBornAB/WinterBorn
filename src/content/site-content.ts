@@ -30,7 +30,7 @@ export const siteContent: Record<Language, SiteContent> = {
     products: {
       kicker: "Produkter",
       title: "Byggda för att användas.",
-      intro: "Tre produkter i olika faser, samlade under samma bolag och samma ambition: tydliga digitala upplevelser som löser riktiga problem.",
+      intro: "Tre produkter i olika faser, samlade under samma bolag och samma ambition: tydliga digitala lösningar som höjer upplevelser.",
       items: [
         {
           name: "RemoteRaid",
@@ -86,7 +86,7 @@ export const siteContent: Record<Language, SiteContent> = {
     products: {
       kicker: "Products",
       title: "Built to be used.",
-      intro: "Three products at different stages, brought together by one company and one ambition: clear digital experiences that solve real problems.",
+      intro: "Three products at different stages, brought together by one company and one ambition: clear digital solutions that elevate experiences.",
       items: [
         {
           name: "RemoteRaid",
