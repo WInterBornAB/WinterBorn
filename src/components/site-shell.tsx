@@ -89,6 +89,7 @@ export function SiteShell() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <span className="footer-wordmark">WinterBorn</span>
+          <span>{content.company.location} · {content.company.registration}</span>
           <span>© {new Date().getFullYear()} {content.footer.rights}</span>
         </div>
       </footer>
