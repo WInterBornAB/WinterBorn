@@ -43,7 +43,7 @@ export function SiteShell() {
     <div className="site-shell">
       <header className="site-header">
         <div className="container header-inner">
-          <a className="wordmark" href="#top" aria-label="WinterBorn home" onClick={closeMenu}>WinterBorn</a>
+          <a className="wordmark" href="#top" aria-label="WinterBorn home" onClick={closeMenu}><svg className="brand-symbol" viewBox="0 0 120 60" fill="none" aria-hidden="true"><defs><linearGradient id="winterborn-brand-gradient" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="#7A5CFF"/><stop offset=".52" stopColor="#00D1FF"/><stop offset="1" stopColor="#4EE6C4"/></linearGradient></defs><path d="M8 34 C17 2 28 7 40 34 S59 53 70 29 S87 16 94 33 S107 37 115 8" stroke="url(#winterborn-brand-gradient)" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/></svg><span>WINTERBORN</span></a>
           <nav className="desktop-nav" aria-label={language === "sv" ? "Huvudnavigation" : "Main navigation"}>
             <a href="#products">{content.nav.products}</a>
             <a href="#about">{content.nav.about}</a>
@@ -102,7 +102,19 @@ export function SiteShell() {
           gap: 14px;
         }
         .wordmark {
-          letter-spacing: 0.01em;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          width: fit-content;
+          letter-spacing: 0.14em;
+          font-size: 0.94rem;
+          font-weight: 600;
+        }
+        .wordmark::after { display: none; }
+        .brand-symbol { width: 39px; height: 27px; flex: none; }
+        @media (max-width: 380px) {
+          .wordmark { gap: 7px; font-size: 0.82rem; letter-spacing: 0.1em; }
+          .brand-symbol { width: 33px; }
         }
         .mobile-menu-toggle {
           width: 34px;
