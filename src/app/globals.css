@@ -214,9 +214,12 @@ body { background: radial-gradient(ellipse at 85% 8%, rgba(51, 155, 178, .09), t
   .featured-product { margin-top: 32px; gap: 28px; }
 }
 
-/* Remote Raid identity above its product description. */
-.product-brand-logo { display: block; width: 80px; height: 80px; margin-top: 28px; }
-.featured-copy .product-brand-logo + h3 { margin-top: 20px; }
+/* Keep the Remote Raid symbol and name together. */
+.product-brand-heading { display: flex; align-items: center; gap: 16px; margin: 28px 0 18px; }
+.product-brand-logo { display: block; flex: 0 0 auto; width: 56px; height: 56px; }
+.product-brand-heading h3 { margin: 0; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; white-space: nowrap; }
 @media (max-width: 699px) {
-  .product-brand-logo { width: 64px; height: 64px; margin-top: 24px; }
+  .product-brand-heading { gap: 12px; margin-top: 24px; }
+  .product-brand-logo { width: 44px; height: 44px; }
+  .product-brand-heading h3 { font-size: clamp(1.7rem, 6.5vw, 2.3rem); }
 }
