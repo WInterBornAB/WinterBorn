@@ -213,3 +213,10 @@ body { background: radial-gradient(ellipse at 85% 8%, rgba(51, 155, 178, .09), t
   .primary-button, .secondary-button { padding-inline: 16px; }
   .featured-product { margin-top: 32px; gap: 28px; }
 }
+
+/* Remote Raid identity above its product description. */
+.product-brand-logo { display: block; width: 80px; height: 80px; margin-top: 28px; }
+.featured-copy .product-brand-logo + h3 { margin-top: 20px; }
+@media (max-width: 699px) {
+  .product-brand-logo { width: 64px; height: 64px; margin-top: 24px; }
+}

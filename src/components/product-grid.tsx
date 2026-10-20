@@ -22,6 +22,7 @@ export function ProductGrid({ content }: ProductGridProps) {
               <p className="kicker">{featured.eyebrow}</p>
               <span className="status-pill">{featured.status}</span>
             </div>
+            <Image className="product-brand-logo" src="/brand/remote-raid.svg" alt="" width={80} height={80} />
             <h3>{featured.name}</h3>
             <p className="featured-description">{featured.description}</p>
             <a className="primary-button" href={featured.href} target="_blank" rel="noreferrer">
