@@ -14,10 +14,13 @@ export function Hero({ content }: HeroProps) {
         </div>
         <h1 id="hero-title" className="hero-title">{content.title}</h1>
         <p className="hero-copy">{content.description}</p>
-        <a className="text-link" href="#products">
+        <div className="hero-actions">
+        <a className="primary-button" href="#remote-raid">
           {content.explore}
-          <span aria-hidden="true">↘</span>
+          <span aria-hidden="true">↗</span>
         </a>
+        <a className="secondary-button" href="#contact">{content.contact}</a>
+        </div>
       </div>
     </section>
   );

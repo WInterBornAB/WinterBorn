@@ -1,8 +1,10 @@
+import Image from "next/image";
 import type { SiteContent } from "@/content/site-content";
 
 type ProductGridProps = { content: SiteContent["products"] };
 
 export function ProductGrid({ content }: ProductGridProps) {
+  const featured = content.items[0];
   return (
     <section id="products" className="section section-bordered" aria-labelledby="products-title">
       <div className="container">
@@ -14,12 +16,32 @@ export function ProductGrid({ content }: ProductGridProps) {
           </div>
         </div>
 
+        <article id="remote-raid" className="featured-product">
+          <div className="featured-copy">
+            <div className="product-topline">
+              <p className="kicker">{featured.eyebrow}</p>
+              <span className="status-pill">{featured.status}</span>
+            </div>
+            <h3>{featured.name}</h3>
+            <p className="featured-description">{featured.description}</p>
+            <a className="primary-button" href={featured.href} target="_blank" rel="noreferrer">
+              {content.featuredLink}<span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div className="app-preview">
+            <div className="preview-toolbar" aria-hidden="true"><span className="preview-dots">•••</span><span>remoteraid.app</span></div>
+            <div className="preview-screen">
+              <Image src="/products/remote-raid.png" alt={content.previewAlt} width={723} height={731} sizes="(max-width: 899px) 90vw, 600px" />
+            </div>
+          </div>
+        </article>
+
         <div className="product-grid">
-          {content.items.map((product, index) => {
+          {content.items.slice(1).map((product, index) => {
             const card = (
-              <article className={`product-card product-card-${index + 1}`}>
+              <article className={`product-card product-card-${index + 2}`}>
                 <div className="product-topline">
-                  <span className="product-index">0{index + 1}</span>
+                  <span className="product-index">0{index + 2}</span>
                   <span className="status-pill">{product.status}</span>
                 </div>
                 <div className="product-body">

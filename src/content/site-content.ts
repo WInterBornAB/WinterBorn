@@ -11,8 +11,8 @@ export type Product = {
 
 export type SiteContent = {
   nav: { products: string; about: string; contact: string };
-  hero: { title: string; description: string; explore: string };
-  products: { kicker: string; title: string; intro: string; items: Product[] };
+  hero: { title: string; description: string; explore: string; contact: string };
+  products: { kicker: string; title: string; intro: string; featuredLink: string; previewAlt: string; items: Product[] };
   about: { kicker: string; title: string; body: string };
   company: { kicker: string; title: string; body: string; location: string; registration: string };
   contact: { kicker: string; title: string; body: string; email: string };
@@ -23,17 +23,20 @@ export const siteContent: Record<Language, SiteContent> = {
   sv: {
     nav: { products: "Produkter", about: "Om", contact: "Kontakt" },
     hero: {
-      title: "WinterBorn",
-      description: "WinterBorn AB utvecklar och driver digitala produkter och tjänster.",
-      explore: "Utforska våra produkter",
+      title: "Digitala produkter för det du gillar att göra.",
+      description: "Vi bygger digitala tjänster för spel, träning och fritid. Med fokus på enkelhet, användbarhet och upplevelsen i varje detalj.",
+      explore: "Utforska Remote Raid",
+      contact: "Kontakta oss",
     },
     products: {
       kicker: "Produkter",
+      featuredLink: "Öppna Remote Raid",
+      previewAlt: "Remote Raids gränssnitt med val mellan Raids och Dynamax Raids.",
       title: "Byggda för att användas.",
       intro: "Tre produkter i olika faser, samlade under samma bolag och samma ambition: tydliga digitala lösningar som höjer upplevelser.",
       items: [
         {
-          name: "RemoteRaid",
+          name: "Remote Raid",
           eyebrow: "Gaming utility",
           description: "En digital tjänst för att matcha och koordinera spelare kring remote raids.",
           status: "Live / test",
@@ -79,17 +82,20 @@ export const siteContent: Record<Language, SiteContent> = {
   en: {
     nav: { products: "Products", about: "About", contact: "Contact" },
     hero: {
-      title: "WinterBorn",
-      description: "WinterBorn AB develops and operates digital products and services.",
-      explore: "Explore our products",
+      title: "Digital products for what you love doing.",
+      description: "We build digital services for gaming, training and leisure. With a focus on simplicity, usability and the details that shape the experience.",
+      explore: "Explore Remote Raid",
+      contact: "Contact us",
     },
     products: {
       kicker: "Products",
+      featuredLink: "Open Remote Raid",
+      previewAlt: "Remote Raid interface with a choice between Raids and Dynamax Raids.",
       title: "Built to be used.",
       intro: "Three products at different stages, brought together by one company and one ambition: clear digital solutions that elevate experiences.",
       items: [
         {
-          name: "RemoteRaid",
+          name: "Remote Raid",
           eyebrow: "Gaming utility",
           description: "A digital service for matching and coordinating players around remote raids.",
           status: "Live / testing",
