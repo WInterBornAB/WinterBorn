@@ -41,7 +41,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .language-switch button[aria-pressed="true"] { color: var(--text); }
 .section { position: relative; padding: 92px 0; }
 .section-bordered { border-top: 1px solid var(--line); }
-.hero { min-height: 760px; padding-top: 200px; display: flex; align-items: center; overflow: hidden; }
+.hero { min-height: 620px; padding-top: 160px; display: flex; align-items: center; overflow: hidden; }
 .hero-content { position: relative; z-index: 2; }
 .hero-orbit { position: absolute; width: min(72vw, 820px); aspect-ratio: 1; right: -22vw; top: 2rem; border: 1px solid rgba(66, 216, 255, 0.14); border-radius: 50%; box-shadow: 0 0 0 7vw rgba(66, 216, 255, 0.015), 0 0 120px rgba(66, 216, 255, 0.08); animation: orbit-breathe 12s ease-in-out infinite; }
 .hero-orbit::before, .hero-orbit::after { content: ""; position: absolute; inset: 15%; border: 1px solid rgba(255, 255, 255, 0.045); border-radius: inherit; }
@@ -50,8 +50,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .eyebrow-line, .kicker, .product-eyebrow, .product-footer, .product-index { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; font-weight: 700; }
 .eyebrow-line { display: flex; align-items: center; gap: 10px; color: var(--muted); margin-bottom: 25px; }
 .signal-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 14px rgba(66, 216, 255, 0.9); }
-.hero-title { margin: 0; max-width: 980px; font-size: clamp(4.55rem, 14.4vw, 10.4rem); line-height: 0.84; letter-spacing: -0.048em; font-weight: 700; font-kerning: normal; }
-.hero-copy { max-width: 640px; margin: 42px 0 32px; color: #b8c1c9; font-size: clamp(1.16rem, 2.2vw, 1.5rem); line-height: 1.5; letter-spacing: -0.025em; }
+.hero-title { margin: 0; max-width: 980px; font-size: clamp(3rem, 6.5vw, 5.5rem); line-height: 1.05; letter-spacing: -0.04em; font-weight: 650; font-kerning: normal; }
+.hero-copy { max-width: 640px; margin: 28px 0 28px; color: #b8c1c9; font-size: clamp(1.05rem, 1.6vw, 1.25rem); line-height: 1.5; letter-spacing: -0.025em; }
 .text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--text); font-size: 0.82rem; font-weight: 650; padding-bottom: 7px; border-bottom: 1px solid rgba(66, 216, 255, 0.45); transition: gap 180ms ease, border-color 180ms ease; }
 .text-link:hover { gap: 16px; border-color: var(--accent); }
 .text-link span { color: var(--accent); }
@@ -121,7 +121,7 @@ h2 { margin: 0; font-size: clamp(2.35rem, 7vw, 5.1rem); line-height: 0.98; lette
 }
 @media (min-width: 900px) {
   .section { padding-block: 120px; }
-  .hero { min-height: 860px; padding-top: 190px; }
+  .hero { min-height: 660px; padding-top: 160px; }
   .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 72px; }
   .product-card { min-height: 480px; padding: 28px; }
   .product-card-2 { transform: translateY(26px); }
@@ -141,7 +141,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.8rem); line-height: 1.06; letter-spacing: -
 .product-body h3 { font-size: clamp(1.85rem, 4vw, 2.8rem); }
 @media (max-width: 699px) {
   .hero { min-height: auto; padding-top: 150px; padding-bottom: 100px; }
-  .hero-title { font-size: clamp(3.4rem, 12vw, 5.2rem); line-height: 0.98; letter-spacing: -0.035em; }
+  .hero-title { font-size: clamp(2.6rem, 9vw, 3.75rem); line-height: 1.05; letter-spacing: -0.035em; }
   .hero-copy { margin-top: 28px; }
   .section { padding-block: 64px; }
   .hero.section { padding-top: 150px; padding-bottom: 100px; }
