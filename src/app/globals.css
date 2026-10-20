@@ -223,3 +223,9 @@ body { background: radial-gradient(ellipse at 85% 8%, rgba(51, 155, 178, .09), t
   .product-brand-logo { width: 44px; height: 44px; }
   .product-brand-heading h3 { font-size: clamp(1.7rem, 6.5vw, 2.3rem); }
 }
+
+/* The supplied Training artwork includes its own wordmark. */
+.training-wordmark { display: block; width: 236px; max-width: 100%; height: auto; }
+@media (max-width: 699px) {
+  .training-wordmark { width: 204px; }
+}

@@ -7,6 +7,7 @@ export type Product = {
   status: string;
   href?: string;
   external?: boolean;
+  logo?: string;
 };
 
 export type SiteContent = {
@@ -45,6 +46,7 @@ export const siteContent: Record<Language, SiteContent> = {
         },
         {
           name: "WNTR Training",
+          logo: "/brand/wntr-training.svg",
           eyebrow: "Training platform",
           description: "En träningsplattform för atleter och coacher med strukturerade program, progression och enkel uppföljning.",
           status: "Under utveckling",
@@ -104,6 +106,7 @@ export const siteContent: Record<Language, SiteContent> = {
         },
         {
           name: "WNTR Training",
+          logo: "/brand/wntr-training.svg",
           eyebrow: "Training platform",
           description: "A training platform for athletes and coaches with structured programming, progression and simple follow-up.",
           status: "In development",

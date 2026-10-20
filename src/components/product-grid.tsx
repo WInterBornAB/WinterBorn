@@ -49,7 +49,11 @@ export function ProductGrid({ content }: ProductGridProps) {
                 </div>
                 <div className="product-body">
                   <p className="product-eyebrow">{product.eyebrow}</p>
-                  <h3>{product.name}</h3>
+                  <h3>
+                    {product.logo ? (
+                      <Image className="training-wordmark" src={product.logo} alt={product.name} width={800} height={300} />
+                    ) : product.name}
+                  </h3>
                   <p>{product.description}</p>
                 </div>
                 <div className="product-footer">
