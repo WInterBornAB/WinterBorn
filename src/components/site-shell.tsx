@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { siteContent, type Language } from "@/content/site-content";
 import { Hero } from "@/components/hero";
 import { ProductGrid } from "@/components/product-grid";
@@ -43,7 +44,9 @@ export function SiteShell() {
     <div className="site-shell">
       <header className="site-header">
         <div className="container header-inner">
-          <a className="wordmark" href="#top" aria-label="WinterBorn home" onClick={closeMenu}>WinterBorn</a>
+          <a className="wordmark" href="#top" aria-label="WinterBorn home" onClick={closeMenu}>
+            <Image src="/brand/winterborn-horizontal.svg" alt="WinterBorn" width={900} height={150} className="brand-logo" priority />
+          </a>
           <nav className="desktop-nav" aria-label={language === "sv" ? "Huvudnavigation" : "Main navigation"}>
             <a href="#products">{content.nav.products}</a>
             <a href="#about">{content.nav.about}</a>
@@ -88,7 +91,9 @@ export function SiteShell() {
 
       <footer className="site-footer">
         <div className="container footer-inner">
-          <span className="footer-wordmark">WinterBorn</span>
+          <a className="footer-wordmark" href="#top" aria-label="WinterBorn home">
+            <Image src="/brand/winterborn-horizontal.svg" alt="WinterBorn" width={900} height={150} className="brand-logo" />
+          </a>
           <span>{content.company.location} · {content.company.registration}</span>
           <span>© {new Date().getFullYear()} {content.footer.rights}</span>
         </div>

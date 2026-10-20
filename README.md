@@ -22,7 +22,7 @@ npm run build
 ```
 
 ## Brand status
-The current site uses a text-only `WinterBorn` wordmark. The final visual identity/logo will replace it later without changing the site structure.
+The header and footer use the designer-supplied WinterBorn vector artwork in `public/brand/winterborn-horizontal.svg`. The original symbol and outlined lettering are arranged horizontally without changing their colors or proportions. The light lettering is intended for the dark site background.
 
 ## Products
 - RemoteRaid — https://remoteraid.app
