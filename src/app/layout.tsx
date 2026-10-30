@@ -1,16 +1,31 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = "https://www.winterborn.se";
+const siteTitle = "WinterBorn AB – Digitala produkter för spel, träning och fritid";
+const siteDescription =
+  "WinterBorn AB utvecklar digitala produkter och tjänster för spel, träning och fritid – bland annat Remote Raid och WNTR Training.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://winterborn.se"),
-  title: "WinterBorn AB",
-  description: "WinterBorn AB utvecklar och driver digitala produkter och tjänster.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "WinterBorn AB",
-    description: "WinterBorn AB utvecklar och driver digitala produkter och tjänster.",
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: "WinterBorn AB",
     type: "website",
     locale: "sv_SE",
     alternateLocale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
   },
 };
 
